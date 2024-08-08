@@ -12,6 +12,7 @@ body {
 }
 
 .container {
+   position: relative;
    height: 100vh;
    margin: 0px auto;
    display: flex;
@@ -19,21 +20,40 @@ body {
 }
 
 .phone {
+   position: relative;
    width: 320px;
    height: 600px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
    margin: 0 auto;
    border-radius: 30px;
    border: 5px solid #110d0d;
    background-color: #18212e;
    box-shadow: 0 0 15px #000000;
+   overflow: hidden;
+}
+
+.phone-inner {
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+   height: 100%;
 }
 
 .phone-header {
-   margin-top: 10%;
    font-size: 16px;
+}
+
+.left {
+   position: absolute;
+   left: 20px;
+}
+
+.left:hover {
+   cursor: pointer;
+   opacity: 0.5;
 }
 
 .phone-info {
@@ -83,7 +103,6 @@ body {
 }
 
 .phone-controls {
-   margin-top: 15%;
    width: 80%;
    height: 22%;
    display: flex;
@@ -127,7 +146,7 @@ body {
 .actual-time {
    position: absolute;
    left: 0;
-   top: 5%;
+   top: 15%;
    color: #969696;
    font-size: 12px;
 }
@@ -135,13 +154,101 @@ body {
 .default-time {
    position: absolute;
    right: 0;
-   top: 5%;
-   color: #55e5ff77;
+   top: 15%;
+   color: #53e5ffb0;
    font-size: 12px;
 }
 
 .controls-buttons {
+   position: relative;
    width: 80%;
    display: flex;
    justify-content: space-between;
+   align-items: center;
+}
+
+.random {
+   padding-bottom: 3px;
+}
+
+.repeate, .prev, .pause, .play, .next, .random {
+   cursor: pointer;
+}
+
+.repeate:hover, .prev:hover, .pause:hover, .play:hover, .next:hover, .random:hover {
+   opacity: 0.5;
+   transition: all 0.2s linear;
+}
+
+.pause {
+   position: absolute;
+   top: 0;
+   left: 45%;
+}
+
+.hide {
+   display: none;
+}
+
+.controls-lyrics {
+   display: flex;
+   align-items: center;
+   font-size: 13px;
+}
+
+.controls-lyrics:hover {
+   cursor: pointer;
+   opacity: 0.5;
+   transition: all 0.2s linear;
+}
+
+.song-text {
+   position: absolute;
+   bottom: -100%;
+   left: 5%;
+   width: 90%;
+   text-align: justify;
+   background-color: #18212e;
+   border-radius: 15px;
+   font-size: 11px;
+}
+
+.library {
+   width: 90%;
+   height: 100%;
+   position: absolute;
+   left: -92%;
+   background-color: #18212e;
+}
+
+.library-header {
+   margin-bottom: 20px;
+   padding-left: 20px;
+   padding-top: 10px;
+}
+
+.library-songs {
+   height: 80%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+
+.song {
+   display: flex;
+   align-items: center;
+   font-size: 14px;
+}
+
+.song:hover {
+   opacity: 0.7;
+   cursor: pointer;
+   transition: all 0.2s linear;
+}
+
+.lib-img {
+   width: 20px;
+   height: 20px;
+   margin-right: 10px;
+   border-radius: 50%;
 }

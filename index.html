@@ -11,32 +11,75 @@
    <audio id="song" src="./assets/audio/Black Veil Brides In The End.mp3"></audio>
    <div class="container">
       <div class="phone">
-         <div class="phone-header">
-            Now playing
+         <div class="phone-inner">
+            <div class="phone-header">
+               <img src="./assets/img/left.svg" alt="svg" class="left">
+               Now playing
+            </div>
+            <div class="phone-info">
+               <div class="image">
+                  <img src="./assets/img/bvb.jfif" alt="img" class="img">
+               </div>
+               <span class="song">In the end</span>
+               <span class="artist">Black veil brides</span>
+            </div>
+            <div class="phone-controls">
+               <div class="controls-audio">
+                  <div class="actual-time">0</div>
+                  <input type="range" id="progress" class="range">
+                  <div class="default-time">3:00</div>
+               </div>
+               <div class="controls-buttons">
+                  <div class="repeate"><img src="./assets/img/repeate.svg" alt="svg"></div>
+                  <div class="prev"><img src="./assets/img/prev.svg" alt="svg"></div>
+                  <div class="pause hide"><img src="./assets/img/pause.svg" alt="svg"></div>
+                  <div class="play"><img src="./assets/img/play.svg" alt="svg"></div>
+                  <div class="next"><img src="./assets/img/next.svg" alt="svg"></div>
+                  <div class="random"><img src="./assets/img/random.svg" alt="svg"></div>
+               </div>
+               <div class="controls-lyrics">
+                  <img src="./assets/img/up.svg" alt="svg">Lyrics
+               </div>
+            </div>
          </div>
-         <div class="phone-info">
-            <div class="image">
-               <img src="./assets/img/bvb.jfif" alt="img" class="img">
-            </div>
-            <span class="song">In the end</span>
-            <span class="artist">Black veil brides</span>
-         </div>
-         <div class="phone-controls">
-            <div class="controls-audio">
-               <div class="actual-time">0</div>
-               <input type="range" id="progress" class="range">
-               <div class="default-time">3:00</div>
-            </div>
-            <div class="controls-buttons">
-               <div class="repeate"><img src="./assets/img/repeate.svg" alt="svg"></div>
-               <div class="prev"><img src="./assets/img/prev.svg" alt="svg"></div>
-               <div class="pause"><img src="./assets/img/pause.svg" alt="svg"></div>
-               <div class="play"><img src="./assets/img/play.svg" alt="svg"></div>
-               <div class="next"><img src="./assets/img/next.svg" alt="svg"></div>
-               <div class="random"><img src="./assets/img/random.svg" alt="svg"></div>
-            </div>
-            <div class="controls-lyrics">
-               <img src="./assets/img/up.svg" alt="svg">Lyrics
+         <pre class="song-text">
+         </pre>
+         <div class="library">
+            <div class="library-header">My playlist</div>
+            <div class="library-songs">
+               <div class="song">
+                  <img src="./assets/img/bvb.jfif" alt="img" class="lib-img"><span>Black veil brides - In the end</span>
+               </div>
+               <div class="song">
+                  <img src="./assets/img/fadeout.jfif" alt="img" class="lib-img"><span>Asking Alexandria - Faded Out</span>
+               </div>
+               <div class="song">
+                  <img src="./assets/img/tdid.jpg" alt="img" class="lib-img"><span>Christopher James Dececio - The Devil In Disguise</span>
+               </div>
+               <div class="song">
+                  <img src="./assets/img/dope.jpg" alt="img" class="lib-img"><span>Dope - My Funeral</span>
+               </div>
+               <div class="song">
+                  <img src="./assets/img/emmy.png" alt="img" class="lib-img"><span>Emmy - Witch Woods</span>
+               </div>
+               <div class="song">
+                  <img src="./assets/img/enmy.jpg" alt="img" class="lib-img"><span>ENMY - The Ledge</span>
+               </div>
+               <div class="song">
+                  <img src="./assets/img/ffdpF8.jpg" alt="img" class="lib-img"><span>Five Finger Death Punch - Inside Out</span>
+               </div>
+               <div class="song">
+                  <img src="./assets/img/rammstein.jfif" alt="img" class="lib-img"><span>Rammstein - Du Hast</span>
+               </div>
+               <div class="song">
+                  <img src="./assets/img/Sabaton-Heroes.webp" alt="img" class="lib-img"><span>Sabaton - Night Witches</span>
+               </div>
+               <div class="song">
+                  <img src="./assets/img/horizon.jpg" alt="img" class="lib-img"><span>Smash Into Pieces - Running Away from Home</span>
+               </div>
+               <div class="song">
+                  <img src="./assets/img/30sec.jfif" alt="img" class="lib-img"><span>Thirty Seconds to Mars - From Yesterday</span>
+               </div>
             </div>
          </div>
       </div>
