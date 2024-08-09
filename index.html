@@ -28,19 +28,28 @@
             <div class="phone-controls">
                <div class="controls-audio">
                   <div class="actual-time">0</div>
-                  <input type="range" id="progress" class="range">
-                  <div class="default-time">3:00</div>
+                  <input type="range" id="progress" class="range" min="0" value="0" max="100">
+                  <div class="default-time"></div>
                </div>
                <div class="controls-buttons">
-                  <div class="repeate"><img src="./assets/img/repeate.svg" alt="svg"></div>
+                  <div class="repeat"><img src="./assets/img/repeat.svg" alt="svg" id="rep-white"><img src="./assets/img/activeRepeate.svg" alt="" class="hidden" id="rep-blue"></div>
                   <div class="prev"><img src="./assets/img/prev.svg" alt="svg"></div>
                   <div class="pause hide"><img src="./assets/img/pause.svg" alt="svg"></div>
                   <div class="play"><img src="./assets/img/play.svg" alt="svg"></div>
                   <div class="next"><img src="./assets/img/next.svg" alt="svg"></div>
-                  <div class="random"><img src="./assets/img/random.svg" alt="svg"></div>
+                  <div class="random"><img src="./assets/img/random.svg" alt="svg" id="random"><img src="./assets/img/activeRandom.svg" alt="svg" class="hidden" id="random-blue"></div>
                </div>
                <div class="controls-lyrics">
                   <img src="./assets/img/up.svg" alt="svg">Lyrics
+               </div>
+               <div class="volume" id="volume">
+                  <img src="./assets/img/volume.svg" alt="svg">
+                  <div class="volume-slider">
+                     <div class="volume-percent"></div>
+                  </div>
+               </div>
+               <div class="volume hide" id="no-volume">
+                  <img src="./assets/img/novolume.svg" alt="svg">
                </div>
             </div>
          </div>

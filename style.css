@@ -171,11 +171,11 @@ body {
    padding-bottom: 3px;
 }
 
-.repeate, .prev, .pause, .play, .next, .random {
+.repeat, .prev, .pause, .play, .next, .random {
    cursor: pointer;
 }
 
-.repeate:hover, .prev:hover, .pause:hover, .play:hover, .next:hover, .random:hover {
+.repeat:hover, .prev:hover, .pause:hover, .play:hover, .next:hover, .random:hover {
    opacity: 0.5;
    transition: all 0.2s linear;
 }
@@ -187,7 +187,8 @@ body {
 }
 
 .hide {
-   display: none;
+   visibility: hidden;
+   z-index: -1;
 }
 
 .controls-lyrics {
@@ -220,10 +221,10 @@ body {
 }
 
 .library {
-   width: 95%;
+   width: 96%;
    height: 100%;
    position: absolute;
-   left: -95%;
+   left: -97%;
    background-color: #18212e;
    transition: all 0.5s linear;
 }
@@ -243,6 +244,7 @@ body {
 
 .moved {
    left: 3%;
+   z-index: 1;
 }
 
 .song {
@@ -290,4 +292,47 @@ body {
 .close-library:hover {
    cursor: pointer;
    opacity: 0.5;
+}
+
+.volume {
+   position: absolute;
+   left: 11%;
+   bottom: 26%;
+   opacity: 0.4;
+   transition: all 0.3s linear;
+}
+
+.volume:hover {
+   .volume-slider {
+      width: 100px;
+   }
+   .volume-percent {
+      opacity: 1;
+   }
+   cursor: pointer;
+   opacity: 1;
+}
+
+.volume-slider, .volume-percent {
+   position: absolute;
+   top: 10px;
+   left: 26px;
+   height: 5px;
+   width: 0px;
+   background-color: #fff;
+   transition: all 0.3s linear;
+}
+
+.volume-percent {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   height: 5px;
+   width: 30px;
+   background-color: #50c8ff;
+   opacity: 0;
+}
+
+.hidden {
+   display: none;
 }
