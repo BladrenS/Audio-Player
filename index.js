@@ -33,7 +33,7 @@ function pauseAudio() {
 };
 
 async function getInfo() {
-   let information = await fetch('./songsInfo.JSON')
+   let information = await fetch('https://github.com/BladrenS/AudioPlayer/blob/gh-pages/songsInfo.json')
    .then(response => response.json()); 
    return information;
 };
