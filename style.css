@@ -4,8 +4,7 @@
 }
 
 body {
-   background: url('./assets/img/bvb.jfif');
-   background-size: cover;
+   background-size: 100% 100%;
    backdrop-filter: blur(5px);
    font: 18px Comic Sans MS, sans-serif;
    color: #fff;
@@ -17,12 +16,13 @@ body {
    margin: 0px auto;
    display: flex;
    align-items: center;
+   overflow: hidden;
 }
 
 .phone {
    position: relative;
    width: 320px;
-   height: 600px;
+   height: 650px;
    margin: 0 auto;
    border-radius: 30px;
    border: 5px solid #110d0d;
@@ -72,7 +72,7 @@ body {
    justify-content: center;
    background: radial-gradient(circle, rgb(98, 107, 110) 1%, rgba(70, 131, 180, 0) 70%);
    animation: gradient 4s infinite alternate;
-   transition: all linear;
+   transition: all ease;
 }
 
 @keyframes gradient {
@@ -80,7 +80,7 @@ body {
       transform: scale(1);
    }
    100% {
-      transform: scale(1.05);
+      transform: scale(1.1);
    }
 }
 
@@ -90,7 +90,7 @@ body {
    border-radius: 50%;
 }
 
-.song {
+.song-name {
    font-size: 20px;
    letter-spacing: 1.5px;
 }
@@ -204,21 +204,28 @@ body {
 
 .song-text {
    position: absolute;
-   bottom: -100%;
-   left: 5%;
-   width: 90%;
+   bottom: -110%;
+   left: 3%;
+   width: 94%;
+   height: 100%;
    text-align: justify;
    background-color: #18212e;
    border-radius: 15px;
    font-size: 11px;
+   transition: all 0.7s linear;
+}
+
+.top {
+   bottom: -1%;
 }
 
 .library {
-   width: 90%;
+   width: 95%;
    height: 100%;
    position: absolute;
-   left: -92%;
+   left: -95%;
    background-color: #18212e;
+   transition: all 0.5s linear;
 }
 
 .library-header {
@@ -232,6 +239,10 @@ body {
    display: flex;
    flex-direction: column;
    justify-content: space-around;
+}
+
+.moved {
+   left: 3%;
 }
 
 .song {
@@ -251,4 +262,32 @@ body {
    height: 20px;
    margin-right: 10px;
    border-radius: 50%;
+}
+
+.close-text, .close-library {
+   position: absolute;
+   right: 5%;
+   transform: rotate(-90deg);
+   opacity: 0;
+   z-index: -1;
+   transition: all 0.8s ease-in;
+}
+
+.close-text:hover {
+   cursor: pointer;
+   opacity: 0.5;
+}
+
+.show {
+   opacity: 1;
+   z-index: 2;
+}
+
+.close-library {
+   transform: rotate(180deg);
+}
+
+.close-library:hover {
+   cursor: pointer;
+   opacity: 0.5;
 }
