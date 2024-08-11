@@ -37,7 +37,6 @@ async function getInfo() {
    .then(response => response.json()); 
    return information;
 };
-getInfo();
 
 async function generateMain(i) {
    const information = await getInfo();
@@ -91,20 +90,23 @@ closeLib.addEventListener('click', () => {
 
 next.addEventListener('click', () => {
    pauseAudio();
-   counter += 1;
    currentTime = 0;
-   if (counter >= document.querySelectorAll('.song').length) counter = 0;
-   generateMain(counter);
-   playAudio(info[counter].path);
-   isPlay = true;
-   play.classList.add('hide');
-   pause.classList.remove('hide');
    if (randomBoolean) {
       let index = Math.floor(Math.random() * ((document.querySelectorAll('.song').length) - 0) + 0);
       while (index === counter) index = Math.floor(Math.random() * ((document.querySelectorAll('.song').length) - 0) + 0);
       counter = index;
       generateMain(counter);
       playAudio(info[counter].path);
+      play.classList.add('hide');
+      pause.classList.remove('hide');
+   } else {
+      counter += 1;
+      if (counter >= document.querySelectorAll('.song').length) counter = 0;
+      generateMain(counter);
+      playAudio(info[counter].path);
+      isPlay = true;
+      play.classList.add('hide');
+      pause.classList.remove('hide');
    }
 })
 
