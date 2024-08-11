@@ -12,7 +12,7 @@ body {
 
 .container {
    position: relative;
-   height: 100vh;
+   height: 95vh;
    margin: 0px auto;
    display: flex;
    align-items: center;
@@ -335,4 +335,32 @@ body {
 
 .hidden {
    display: none;
+}
+
+.footer {
+   display: flex;
+   justify-content: space-around;
+   padding-bottom: 10px;
+   color: #50c8ff;
+}
+
+.rssshool {
+   background: url('./assets/img/rss.svg');
+   width: 100px;
+   height: 30px;
+   transition: all 0.3s linear;
+}
+
+.rssshool:hover {
+   opacity: 0.5;
+}
+
+.github {
+   text-decoration: none;
+   color: #50c8ff;
+   transition: all 0.3s linear;
+}
+
+.github:hover {
+   opacity: 0.5;
 }
