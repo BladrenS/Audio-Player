@@ -19,6 +19,7 @@ let currentTime = 0;
 let info
 let counter = 0;
 
+// Функции воспроизведения и паузы
 function playAudio(path) {
    audio.src = path;
    audio.currentTime = currentTime;
@@ -32,12 +33,14 @@ function pauseAudio() {
    isPlay = false;
 };
 
+// Получаем инфу о плейлисте
 async function getInfo() {
    let information = await fetch('https://bladrens.github.io/AudioPlayer/songsInfo.json')
    .then(response => response.json()); 
    return information;
 };
 
+// Собираем оформление
 async function generateMain(i) {
    const information = await getInfo();
    info = information;
@@ -49,6 +52,7 @@ async function generateMain(i) {
 }
 generateMain(counter);
 
+// Собираем плейлист
 async function generateLibrary() {
    const information = await getInfo();
    for (let i = 0; i < information.length; i += 1) {
@@ -68,6 +72,7 @@ async function generateLibrary() {
 }
 generateLibrary();
 
+// Навешиваем функционал кнопочек
 left.addEventListener('click', () => {
    library.classList.add('moved');
    closeLib.classList.add('show');
@@ -232,7 +237,7 @@ range.addEventListener("click", e => {
   audio.currentTime = timeToSeek;
 }, false);
 
-
+// Обновление данных на странице + настройка поведения при различных условиях
 setInterval(() => {
    document.querySelector('.actual-time').innerHTML = `${Math.floor(audio.currentTime / 60)} : ${Math.floor(audio.currentTime % 60) <= 9 ? '0' + Math.floor(audio.currentTime % 60) : Math.floor(audio.currentTime % 60)}`;
    if (audio.currentTime) document.querySelector('.range').value = audio.currentTime * 100 / audio.duration

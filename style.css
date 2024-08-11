@@ -341,7 +341,7 @@ body {
    display: flex;
    justify-content: space-around;
    padding-bottom: 10px;
-   color: #50c8ff;
+   color: #198cc2;
 }
 
 .rssshool {
@@ -357,7 +357,7 @@ body {
 
 .github {
    text-decoration: none;
-   color: #50c8ff;
+   color: #198cc2;
    transition: all 0.3s linear;
 }
 
